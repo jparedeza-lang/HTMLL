@@ -1,0 +1,86 @@
+/* 1. Reset Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Fondo y Cuerpo */
+.encabezado {
+    height: 100vh;
+    background-image: url(imagenes/city-4935633_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* 3. Barra de Navegación */
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 20px 50px;
+    width: 100%;
+}
+
+/* 4. Enlaces Generales del Menú */
+.linkss {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center; /* Asegura que todo esté centrado verticalmente */
+}
+
+.linkss a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px; /* Tamaño para "Proyectos" */
+    transition: 0.3s;
+}
+
+/* 5. TAMAÑO ESPECÍFICO PARA DEPARTAMENTOS */
+/* Usamos un selector más fuerte para que no lo ignore */
+.linkss li a.enlace-principal {
+    font-size: 20px !important; /* Ajusta este número a tu gusto */
+    color: #b8860b; 
+}
+
+.linkss a:hover {
+    color: #888;
+}
+
+/* 6. Submenú Desplegable */
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    width: 350px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    list-style: none;
+}
+
+.dropdown:hover .submenu {
+    display: grid;
+}
+
+/* Estilo de los nombres de departamentos (pequeños) */
+.submenu li a {
+    font-size: 14px !important; /* Forzamos a que sean pequeños */
+    font-weight: normal;
+    padding: 5px;
+    display: block;
+    color: #333;
+}
